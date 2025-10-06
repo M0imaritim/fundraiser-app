@@ -1,0 +1,23 @@
+# === Rust ===
+/target
+**/*.rs.bk
+
+# === Cargo ===
+Cargo.lock
+
+# === IDE / Editor ===
+# VS Code
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Logs & Temporary files ===
+*.log
+*.tmp
+*.cache
+.DS_Store
+
+# === Environment & Secrets ===
+.env
+.env.*
