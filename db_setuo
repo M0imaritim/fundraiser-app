@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Variables
+DB_NAME="fundraiser_db"
+DB_USER="jerry"
+DB_PASS="Bebiyot"
+
+# Create the database
+sudo -i -u postgres psql -c "CREATE DATABASE $DB_NAME;"
+
+# Create the database user
+sudo -i -u postgres psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASS';"
+
+# Grant all privileges on the database to the user
+sudo -i -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;"
+
+echo "Database $DB_NAME and user $DB_USER created with specified privileges."
+
